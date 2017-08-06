@@ -1,10 +1,12 @@
-﻿Shader "Kaima/Dissolve/Basic"
+﻿Shader "Kaima/Dissolve/BorderColor"
 {
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
 		_NoiseTex("Noise", 2D) = "white" {}
 		_Threshold("Threshold", Range(0.0, 1.0)) = 0.5
+		_EdgeLength("Edge Length", Range(0.0, 0.2)) = 0.1
+		_EdgeColor("Border Color", Color) = (1,1,1,1)
 	}
 	SubShader
 	{
@@ -38,6 +40,8 @@
 			sampler2D _NoiseTex;
 			float4 _NoiseTex_ST;
 			float _Threshold;
+			float _EdgeLength;
+			fixed4 _EdgeColor;
 			
 			v2f vert (appdata v)
 			{
@@ -50,8 +54,13 @@
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
+				//镂空
 				fixed cutout = tex2D(_NoiseTex, i.uvNoiseTex).r;
 				clip(cutout - _Threshold);
+
+				//边缘颜色
+				if(cutout - _Threshold < _EdgeLength)
+					return _EdgeColor;
 
 				fixed4 col = tex2D(_MainTex, i.uvMainTex);
 				return col;
