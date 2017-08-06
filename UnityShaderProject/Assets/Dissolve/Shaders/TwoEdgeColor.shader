@@ -1,4 +1,4 @@
-﻿Shader "Kaima/Dissolve/EdgeColor"
+﻿Shader "Kaima/Dissolve/TwoEdgeColor"
 {
 	Properties
 	{
@@ -6,7 +6,8 @@
 		_NoiseTex("Noise", 2D) = "white" {}
 		_Threshold("Threshold", Range(0.0, 1.0)) = 0.5
 		_EdgeLength("Edge Length", Range(0.0, 0.2)) = 0.1
-		_EdgeColor("Edge Color", Color) = (1,1,1,1)
+		_EdgeFirstColor("First Edge Color", Color) = (1,1,1,1)
+		_EdgeSecondColor("Second Edge Color", Color) = (1,1,1,1)
 	}
 	SubShader
 	{
@@ -41,7 +42,8 @@
 			float4 _NoiseTex_ST;
 			float _Threshold;
 			float _EdgeLength;
-			fixed4 _EdgeColor;
+			fixed4 _EdgeFirstColor;
+			fixed4 _EdgeSecondColor;
 			
 			v2f vert (appdata v)
 			{
@@ -60,7 +62,10 @@
 
 				//边缘颜色
 				if(cutout - _Threshold < _EdgeLength)
-					return _EdgeColor;
+				{
+					float degree = (cutout - _Threshold) / _EdgeLength;
+					return lerp(_EdgeFirstColor, _EdgeSecondColor, degree);
+				}
 
 				fixed4 col = tex2D(_MainTex, i.uvMainTex);
 				return col;
