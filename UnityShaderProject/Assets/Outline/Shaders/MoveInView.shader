@@ -10,8 +10,8 @@
 	{
 		Pass //Outline
 		{
-			Cull Front
-			ZWrite On
+			Cull Front //因为开启了深度写入，因此要剔除正面以免遮住原物体
+			ZWrite On //开启深度写入来保证两个物体重叠时还能显示出边缘
 
 			CGPROGRAM
 			#pragma vertex vert
@@ -33,8 +33,8 @@
 				v2f o;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 
-				float3 normal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal); //convert normal from model coord to view  coord
-				float2 offset = TransformViewToProjection(normal.xy); //ignore z to make the Outline dont change its size when the camera zoom in/out
+				float3 normal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal); //将法线转到视空间
+				float2 offset = TransformViewToProjection(normal.xy); //只用与屏幕位置有关的xy分量来偏移从而使轮廓大小与摄像机的位置无关
 				o.vertex.xy += offset * o.vertex.z * _Outline;
 
 				return o;
