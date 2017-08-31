@@ -1,4 +1,4 @@
-﻿Shader "Kaima/Other/BornFromY"
+﻿Shader "Kaima/Other/BlackHole"
 {
 	Properties
 	{
@@ -6,6 +6,7 @@
 		_TopY("Top Y", Float) = 0
 		_BottomY("Bottom Y", Float) = 0
 		_Control("Born Control", Range(0, 2)) = 0
+		_BlackHolePos("Black Hole Position", Vector) = (1,1,1,1)
 	}
 	SubShader
 	{
@@ -39,6 +40,7 @@
 			float _TopY;
 			float _BottomY;
 			float _Control;
+			float4 _BlackHolePos;
 
 			float GetNormalizedDist(float worldPosY)
 			{
