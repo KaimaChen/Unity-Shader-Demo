@@ -3,8 +3,8 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-		_TopY("Top Y", Float) = 0
-		_BottomY("Bottom Y", Float) = 0
+		_RightX("Right X", Float) = 0
+		_LeftX("Left X", Float) = 0
 		_Control("Born Control", Range(0, 2)) = 0
 		_BlackHolePos("Black Hole Position", Vector) = (1,1,1,1)
 	}
@@ -37,17 +37,17 @@
 
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
-			float _TopY;
-			float _BottomY;
+			float _RightX;
+			float _LeftX;
 			float _Control;
 			float4 _BlackHolePos;
 
-			float GetNormalizedDist(float worldPosY)
+			float GetNormalizedDist(float worldPosX)
 			{
-				float range = _TopY - _BottomY;
-				float border = _TopY;
+				float range = _RightX - _LeftX;
+				float border = _RightX;
 
-				float dist = abs(worldPosY - border);
+				float dist = abs(worldPosX - border);
 				float normalizedDist = saturate(dist / range);
 				return normalizedDist;
 			}
@@ -57,10 +57,10 @@
 				v2f o;
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-				float3 localNegativeY = mul(unity_WorldToObject, float4(0, 1, 0, 1)).xyz;
-				float normalizedDist = GetNormalizedDist(worldPos.y);
+				float3 toBlackHole = mul(unity_WorldToObject, (_BlackHolePos - worldPos)).xyz;
+				float normalizedDist = GetNormalizedDist(worldPos.x);
 				float val = max(0, _Control - normalizedDist);
-				v.vertex.xyz += localNegativeY * val;
+				v.vertex.xyz += toBlackHole * val;
 
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -69,7 +69,7 @@
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				clip(_TopY - i.worldPos.y);
+				clip(_BlackHolePos.x - i.worldPos.x);
 				fixed4 col = tex2D(_MainTex, i.uv);
 				return col;
 			}

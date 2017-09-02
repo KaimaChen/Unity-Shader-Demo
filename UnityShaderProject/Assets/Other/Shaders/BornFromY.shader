@@ -55,10 +55,10 @@
 				v2f o;
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-				float3 localNegativeY = mul(unity_WorldToObject, float4(0, 1, 0, 1)).xyz;
+				float3 localPositiveY = mul(unity_WorldToObject, float4(0, 1, 0, 1)).xyz;
 				float normalizedDist = GetNormalizedDist(worldPos.y);
 				float val = max(0, _Control - normalizedDist);
-				v.vertex.xyz += localNegativeY * val;
+				v.vertex.xyz += localPositiveY * val;
 
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
