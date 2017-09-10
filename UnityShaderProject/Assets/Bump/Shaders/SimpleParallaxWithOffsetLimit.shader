@@ -1,4 +1,4 @@
-﻿Shader "Kaima/Bump/SimpleParallax"
+﻿Shader "Kaima/Bump/SimpleParallaxWithOffsetLimit"
 {
 	Properties
 	{
@@ -38,13 +38,11 @@
 			float _Gloss;
 			float _HeightScale;
 
-			//最简单的实现，只是根据高度进行偏移
 			float2 ParallaxMapping(float2 uv, float3 viewDir_tangent)
 			{
 				float3 viewDir = normalize(viewDir_tangent);
 				float height = tex2D(_DepthMap, uv).r;
-				//因为viewDir是在切线空间的（xy与uv对齐），所以只用xy偏移就行了
-				float2 p = viewDir.xy / viewDir.z * (height * _HeightScale); 
+				float2 p = viewDir.xy * (height * _HeightScale); 
 				return uv - p;
 			}
 			
