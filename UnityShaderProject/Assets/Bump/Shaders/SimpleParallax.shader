@@ -7,7 +7,7 @@
 		[NoScaleOffset] _DepthMap("Depth Map", 2D) = "white" {}
 		_SpecularColor("Specular Color", Color) = (1,1,1,1)
 		_Gloss("Gloss", Range(32, 256)) = 64
-		_HeightScale("Height Scale", Range(0,1)) = 1
+		_HeightScale("Height Scale", Range(0,1)) = 0.1
 	}
 	SubShader
 	{
