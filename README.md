@@ -7,46 +7,6 @@ Unity Version: 5.4.0f3
 
 # Contents
 
-## Bump
-
-Blog: [Unity Shader - 表面凹凸技术汇总](http://www.jianshu.com/writer#/notebooks/14554929/notes/12209039/preview)
-
-Bump Mapping: 
-
-![](http://upload-images.jianshu.io/upload_images/1278872-bd591e4141c2df87.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Normal Mapping:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-69d3c736e4c17652.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Parallax Mapping:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-4c31f7c59d18619e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Parallax Mapping with offset limiting:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-229dace8be8e0ab3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Steep Parallax Mapping:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-75288589a1a497b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Relief Parallax Mapping:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-fec60e1fc23a7ea9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Parallax Occlusion Mapping, POM:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-94ceb16ac7a9f26a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Parallax Mapping With Self Shadowing:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-4cf8d28db257d40d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Displacement Mapping:
-
-![Displacement](http://upload-images.jianshu.io/upload_images/1278872-f4937c6260a70eb8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 ## Dissolve
 
 Blog: [Unity Shader - 消融效果原理与变体](http://www.jianshu.com/writer#/notebooks/14554929/notes/15463919/preview)
@@ -86,6 +46,46 @@ DissolveFromDirection:
 DirectionAsh:
 
 ![DirectionAsh场景](http://upload-images.jianshu.io/upload_images/1278872-b0f841052d6b021c.gif?imageMogr2/auto-orient/strip)
+
+## Bump
+
+Blog: [Unity Shader - 表面凹凸技术汇总](http://www.jianshu.com/writer#/notebooks/14554929/notes/12209039/preview)
+
+Bump Mapping: 
+
+![](http://upload-images.jianshu.io/upload_images/1278872-bd591e4141c2df87.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Normal Mapping:
+
+![](http://upload-images.jianshu.io/upload_images/1278872-69d3c736e4c17652.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Parallax Mapping:
+
+![](http://upload-images.jianshu.io/upload_images/1278872-4c31f7c59d18619e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Parallax Mapping with offset limiting:
+
+![](http://upload-images.jianshu.io/upload_images/1278872-229dace8be8e0ab3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Steep Parallax Mapping:
+
+![](http://upload-images.jianshu.io/upload_images/1278872-75288589a1a497b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Relief Parallax Mapping:
+
+![](http://upload-images.jianshu.io/upload_images/1278872-fec60e1fc23a7ea9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Parallax Occlusion Mapping, POM:
+
+![](http://upload-images.jianshu.io/upload_images/1278872-94ceb16ac7a9f26a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Parallax Mapping With Self Shadowing:
+
+![](http://upload-images.jianshu.io/upload_images/1278872-4cf8d28db257d40d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Displacement Mapping:
+
+![Displacement](http://upload-images.jianshu.io/upload_images/1278872-f4937c6260a70eb8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## Other
 
