@@ -47,6 +47,8 @@ DirectionAsh:
 
 ![DirectionAsh场景](http://upload-images.jianshu.io/upload_images/1278872-b0f841052d6b021c.gif?imageMogr2/auto-orient/strip)
 
+Trifox:
+
 ![Trifox场景](http://upload-images.jianshu.io/upload_images/1278872-545861d291425e07.gif?imageMogr2/auto-orient/strip)
 
 ## Bump
