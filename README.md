@@ -47,6 +47,8 @@ DirectionAsh:
 
 ![DirectionAsh场景](http://upload-images.jianshu.io/upload_images/1278872-b0f841052d6b021c.gif?imageMogr2/auto-orient/strip)
 
+![Trifox场景](http://upload-images.jianshu.io/upload_images/1278872-545861d291425e07.gif?imageMogr2/auto-orient/strip)
+
 ## Bump
 
 Blog: [Unity Shader - 表面凹凸技术汇总](http://www.jianshu.com/writer#/notebooks/14554929/notes/12209039/preview)
