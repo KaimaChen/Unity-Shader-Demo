@@ -7,6 +7,26 @@ Unity Version: 5.4.0f3
 
 # Contents
 
+## Other
+
+Blog: [Unity Shader - 无意中弄出来的玩具（不定期更新）](http://www.jianshu.com/writer#/notebooks/14554929/notes/16541347/preview)
+
+Squash:
+
+![Squash](http://upload-images.jianshu.io/upload_images/1278872-7d4999ed59000b22.gif?imageMogr2/auto-orient/strip)
+
+BornFromY:
+
+![BornFromY场景](http://upload-images.jianshu.io/upload_images/1278872-95deb6c0aee19308.gif?imageMogr2/auto-orient/strip)
+
+BlackHole:
+
+![BlackHole场景](http://upload-images.jianshu.io/upload_images/1278872-04a21714ad978db4.gif?imageMogr2/auto-orient/strip)
+
+GhostShader:
+
+![GhostShader场景](http://upload-images.jianshu.io/upload_images/1278872-7a931b421eb1cbdd.gif?imageMogr2/auto-orient/strip)
+
 ## Dissolve
 
 Blog: [Unity Shader - 消融效果原理与变体](http://www.jianshu.com/writer#/notebooks/14554929/notes/15463919/preview)
@@ -91,21 +111,19 @@ Displacement Mapping:
 
 ![Displacement](http://upload-images.jianshu.io/upload_images/1278872-f4937c6260a70eb8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## Other
+## Depth
 
-Blog: [Unity Shader - 无意中弄出来的玩具（不定期更新）](http://www.jianshu.com/writer#/notebooks/14554929/notes/16541347/preview)
+Scan Line:
 
-Squash:
+![ScanLine场景](http://upload-images.jianshu.io/upload_images/1278872-08f4c6582067bd57.gif?imageMogr2/auto-orient/strip)
 
-![Squash](http://upload-images.jianshu.io/upload_images/1278872-7d4999ed59000b22.gif?imageMogr2/auto-orient/strip)
+Intersection Highlight:
 
-BornFromY:
+![IntersectionHighlight场景](http://upload-images.jianshu.io/upload_images/1278872-9ec5d200a5af38f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![BornFromY场景](http://upload-images.jianshu.io/upload_images/1278872-95deb6c0aee19308.gif?imageMogr2/auto-orient/strip)
+Force Field:
 
-BlackHole:
-
-![BlackHole场景](http://upload-images.jianshu.io/upload_images/1278872-04a21714ad978db4.gif?imageMogr2/auto-orient/strip)
+![ForceField场景](http://upload-images.jianshu.io/upload_images/1278872-a918b5984febe871.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## Outline
 
