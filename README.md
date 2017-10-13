@@ -125,6 +125,14 @@ Force Field:
 
 ![ForceField场景](http://upload-images.jianshu.io/upload_images/1278872-a918b5984febe871.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+Fog:
+
+![Fog场景](http://upload-images.jianshu.io/upload_images/1278872-4940d814bedf17aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+EdgeDetection:
+
+![EdgeDetection场景](http://upload-images.jianshu.io/upload_images/1278872-b8821751f5a5f2cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 Water Flooded:
 
 ![WaterFlooded场景](http://upload-images.jianshu.io/upload_images/1278872-52b6016e80bcba49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
