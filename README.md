@@ -141,6 +141,14 @@ Vertical Fog:
 
 ![VerticalFog场景](http://upload-images.jianshu.io/upload_images/1278872-e3b89eebee867bce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+Motion Blur:
+
+![MotionBlur场景](http://upload-images.jianshu.io/upload_images/1278872-e973b20de46e0fb4.gif?imageMogr2/auto-orient/strip)
+
+Depth of Field:
+
+![DepthOfField场景](http://upload-images.jianshu.io/upload_images/1278872-43ebd6026ef91794.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ## Outline
 
 ## Shadows
