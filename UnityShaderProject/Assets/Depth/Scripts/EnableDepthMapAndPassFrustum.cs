@@ -20,9 +20,7 @@ public class EnableDepthMapAndPassFrustum : MonoBehaviour
             Vector3 toBottomLeft = forward - toTop - toRight;
             Vector3 toTopRight = forward + toTop + toRight;
             Vector3 toBottomRight = forward - toTop + toRight;
-
-            float scale = toTopLeft.magnitude / cam.nearClipPlane;
-
+            
             toTopLeft /= cam.nearClipPlane;
             toBottomLeft /= cam.nearClipPlane;
             toTopRight /= cam.nearClipPlane;
