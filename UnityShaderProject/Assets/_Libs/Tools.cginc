@@ -29,4 +29,16 @@ float3 HSB2RGB(in float3 c)
 	return c.z * lerp(float3(1.0, 1.0, 1.0), rgb, c.y);
 }
 
+float Circle(float2 center, float radius, float2 uv)
+{
+	float dist = distance(center, uv);
+	return step(radius, dist);
+}
+
+float SmoothCircle(float2 center, float radius, float smoothWidth, float2 uv)
+{
+	float dist = distance(center, uv);
+	return smoothstep(radius, radius + smoothWidth, dist);
+}
+
 #endif
