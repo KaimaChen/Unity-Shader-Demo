@@ -50,7 +50,7 @@
 				float cir = Circle(float2(0.5, 0.5), 0.2, i.uv);
 
 				fixed3 circleCol = cir * fixed3(1,0,0);
-				fixed3 lineCol = (1 - cir) * ((1 - f) + f * fixed3(1,0,0));
+				fixed3 lineCol = (1 - cir) * ((1 - f) + f * fixed3(0.9,0.9,0));
 				col = circleCol + lineCol;
 				return fixed4(col, 1);
 			}
