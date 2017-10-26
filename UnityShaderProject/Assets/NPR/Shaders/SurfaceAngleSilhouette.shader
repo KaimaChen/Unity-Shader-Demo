@@ -4,7 +4,6 @@
 	{
 		[NoScaleOffset] _MainTex ("Texture", 2D) = "white" {}
 		_Outline("Outline", Range(0, 1)) = 0.3
-		[NoScaleOffset] _SilhouetteTex("Silhouette Texture", 2D) = "white" {}
 	}
 	SubShader
 	{
@@ -27,7 +26,6 @@
 			};
 
 			sampler2D _MainTex;
-			sampler2D _SilhouetteTex;
 			float _Outline;
 			
 			v2f vert (appdata_base v)
@@ -47,20 +45,12 @@
 				return edge;
 			}
 
-			fixed3 SurfaceAngleSilhouetteUsingTex(float3 normal, float3 viewDir)
-			{
-				float edge = dot(normal, viewDir);
-				edge = edge * 0.5 + 0.5;
-				return tex2D(_SilhouetteTex, float2(edge, edge)).rgb; 
-			}
-			
 			fixed4 frag (v2f i) : SV_Target
 			{
 				float3 worldNormal = normalize(i.worldNormal);
 				float3 worldViewDir = normalize(UnityWorldSpaceViewDir(i.worldPos));
 
-				// fixed3 edge = SurfaceAngleSilhouette(worldNormal, worldViewDir);
-				fixed3 edge = SurfaceAngleSilhouetteUsingTex(worldNormal, worldViewDir);
+				fixed3 edge = SurfaceAngleSilhouette(worldNormal, worldViewDir);
 
 				fixed4 col = fixed4(edge, 1.0);
 				return col;
