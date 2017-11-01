@@ -1,9 +1,8 @@
-﻿Shader "Kaima/Shape/Box"
+﻿Shader "Kaima/Shape/Rect"
 {
 	Properties
 	{
-		_Position("Position (XY)", Vector) = (0.5,0.5,0,0)
-		_Size("Size", Vector) = (0.3,0.3,0,0)
+		_Border("Border", Vector) = (0.1,0.1,0.1,0.1)
 	}
 	SubShader
 	{
@@ -16,7 +15,7 @@
 			#pragma fragment frag
 			
 			#include "UnityCG.cginc"
-			#include "Assets/_Libs/Easing.cginc"
+			#include "Assets/_Libs/Tools.cginc"
 
 			struct appdata
 			{
@@ -30,8 +29,7 @@
 				float4 vertex : SV_POSITION;
 			};
 
-			float4 _Position;
-			float4 _Size;
+			float4 _Border;
 
 			v2f vert (appdata v)
 			{
@@ -41,17 +39,9 @@
 				return o;
 			}
 
-			float box(float2 position, float2 size, float2 st)
-			{
-				float2 s = position - size * 0.5;
-				float2 uv = smoothstep(s, s + 0.001, st);
-				uv *= smoothstep(s, s + 0.001, 2 * position - st);
-				return uv.x * uv.y;
-			}
-			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				return box(_Position, _Size.xy, i.uv);
+				return Rect(_Border, i.uv); 
 			}
 			ENDCG
 		}

@@ -31,26 +31,6 @@ GhostShader:
 
 Blog: [Unity Shader - 消融效果原理与变体](http://www.jianshu.com/writer#/notebooks/14554929/notes/15463919/preview)
 
-Basic Dissolve:
-
-![Basic场景](http://upload-images.jianshu.io/upload_images/1278872-439d05e61a27299e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-EdgeColor:
-
-![EdgeColor场景](http://upload-images.jianshu.io/upload_images/1278872-f77062e6239e6821.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-TwoEdgeColor:
-
-![TwoEdgeColor场景](http://upload-images.jianshu.io/upload_images/1278872-af4c45009b702c43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-BlendOriginColor:
-
-![BlendOriginColor场景](http://upload-images.jianshu.io/upload_images/1278872-7c0cb0798a802ab8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Ramp:
-
-![Ramp场景](http://upload-images.jianshu.io/upload_images/1278872-87afb2123581f284.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 DissolveFromPoint:
 
 ![DissolveFromPoint场景](http://upload-images.jianshu.io/upload_images/1278872-ab45be0e734ad50d.gif?imageMogr2/auto-orient/strip)
@@ -74,30 +54,6 @@ Trifox:
 ## Bump
 
 Blog: [Unity Shader - 表面凹凸技术汇总](http://www.jianshu.com/writer#/notebooks/14554929/notes/12209039/preview)
-
-Bump Mapping: 
-
-![](http://upload-images.jianshu.io/upload_images/1278872-bd591e4141c2df87.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Normal Mapping:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-69d3c736e4c17652.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Parallax Mapping:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-4c31f7c59d18619e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Parallax Mapping with offset limiting:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-229dace8be8e0ab3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Steep Parallax Mapping:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-75288589a1a497b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Relief Parallax Mapping:
-
-![](http://upload-images.jianshu.io/upload_images/1278872-fec60e1fc23a7ea9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Parallax Occlusion Mapping, POM:
 
@@ -134,10 +90,6 @@ Fog:
 EdgeDetection:
 
 ![EdgeDetection场景](http://upload-images.jianshu.io/upload_images/1278872-b8821751f5a5f2cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-Water Flooded:
-
-![WaterFlooded场景](http://upload-images.jianshu.io/upload_images/1278872-52b6016e80bcba49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Vertical Fog:
 

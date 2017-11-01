@@ -39,7 +39,7 @@ float Line(float2 point1, float2 point2, float width, float aa, float2 uv)
 {
 	if(point1.x == point2.x) //避免下面的除0问题
 	{
-		return 1 - smoothstep(width/2.0, width/2.0+0.01, abs(uv.x - point1.x));
+		return 1 - smoothstep(width/2.0, width/2.0+aa, abs(uv.x - point1.x));
 	}
 
 	float k = (point1.y - point2.y) / (point1.x - point2.x);
@@ -62,7 +62,7 @@ float LineSegment(float2 point1, float2 point2, float width, float aa, float2 uv
 		if(uv.y < smallerY || uv.y > biggerY) 
 			return 0;
 
-		return 1 - smoothstep(width/2.0, width/2.0+0.01, abs(uv.x - point1.x));
+		return 1 - smoothstep(width/2.0, width/2.0+aa, abs(uv.x - point1.x));
 	}
 	else if(point1.y == point2.y)
 	{
