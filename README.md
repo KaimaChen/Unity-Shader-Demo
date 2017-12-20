@@ -103,6 +103,10 @@ Depth of Field:
 
 ![DepthOfField场景](http://upload-images.jianshu.io/upload_images/1278872-43ebd6026ef91794.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+## Shape
+
+![ManyShapes场景](http://upload-images.jianshu.io/upload_images/1278872-0b68d02bc5f0bc8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ## Outline
 
 ## Shadows
