@@ -50,7 +50,7 @@ float Line(float2 point1, float2 point2, float width, float aa, float2 uv)
 	return 1.0 - t;
 }
 
-float LineSegment(float2 point1, float2 point2, float width, float aa, float2 uv)
+float LineSegment(float2 point1, float2 point2, float width, float smooth, float2 uv)
 {
 	float smallerX = min(point1.x, point2.x);
 	float biggerX = max(point1.x, point2.x);
@@ -62,7 +62,7 @@ float LineSegment(float2 point1, float2 point2, float width, float aa, float2 uv
 		if(uv.y < smallerY || uv.y > biggerY) 
 			return 0;
 
-		return 1 - smoothstep(width/2.0, width/2.0+aa, abs(uv.x - point1.x));
+		return 1 - smoothstep(width/2.0, width/2.0+smooth, abs(uv.x - point1.x));
 	}
 	else if(point1.y == point2.y)
 	{
@@ -79,7 +79,7 @@ float LineSegment(float2 point1, float2 point2, float width, float aa, float2 uv
 	float b = point1.y - k * point1.x;
 
 	float d = abs(k * uv.x - uv.y + b) / sqrt(k * k + 1);
-	float t = smoothstep(width/2.0, width/2.0 + aa, d);
+	float t = smoothstep(width/2.0, width/2.0 + smooth, d);
 	return 1.0 - t;
 }
 

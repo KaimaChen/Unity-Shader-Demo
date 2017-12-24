@@ -39,7 +39,7 @@
 			{
 				float v = distance(i.uv, _Center);
 				v = frac(v * _Num);
-				fixed3 col = v;
+				fixed3 col = step(0.2, v);
 				
 				return fixed4(col, 1);
 			}
