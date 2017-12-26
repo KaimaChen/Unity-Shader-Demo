@@ -53,7 +53,7 @@ Trifox:
 
 ## Bump
 
-Blog: [Unity Shader - 表面凹凸技术汇总](http://www.jianshu.com/writer#/notebooks/14554929/notes/12209039/preview)
+Blog: [Unity Shader - 表面凹凸技术汇总](https://www.jianshu.com/p/fea6c9fc610f)
 
 Parallax Occlusion Mapping, POM:
 
