@@ -9,7 +9,7 @@ Unity Version: 5.4.0f3
 
 ## Other
 
-Blog: [Unity Shader - 无意中弄出来的玩具（不定期更新）](http://www.jianshu.com/writer#/notebooks/14554929/notes/16541347/preview)
+Blog: [Unity Shader - 一些玩具Shader](https://www.jianshu.com/p/7cbae91e88d1)
 
 Squash:
 
@@ -29,7 +29,7 @@ GhostShader:
 
 ## Dissolve
 
-Blog: [Unity Shader - 消融效果原理与变体](http://www.jianshu.com/writer#/notebooks/14554929/notes/15463919/preview)
+Blog: [Unity Shader - 消融效果原理与变体](https://www.jianshu.com/p/d8b535efa9db)
 
 DissolveFromPoint:
 
@@ -69,7 +69,7 @@ Displacement Mapping:
 
 ## Depth
 
-Blog: [Unity Shader - 深度图基础及应用](http://www.jianshu.com/p/80a932d1f11e)
+Blog: [Unity Shader - 深度图基础及应用](https://www.jianshu.com/p/fea6c9fc610f)
 
 Scan Line:
 
@@ -105,7 +105,9 @@ Depth of Field:
 
 ## Shape
 
-![ManyShapes场景](http://upload-images.jianshu.io/upload_images/1278872-0b68d02bc5f0bc8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+Blog: [Unity Shader - 几何图形绘制](https://www.jianshu.com/p/3cb78b68b74f)
+
+![ManyShapes场景](http://upload-images.jianshu.io/upload_images/1278872-1ee0ec23bd37038d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## Outline
 
