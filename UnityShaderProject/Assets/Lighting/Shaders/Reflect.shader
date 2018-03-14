@@ -36,7 +36,7 @@
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-				float3 worldNormal = UnityObjectToWorldDir(v.normal);
+				float3 worldNormal = UnityObjectToWorldNormal(v.normal);
 				float3 worldViewDir = UnityWorldSpaceViewDir(worldPos);
 				o.worldReflect = reflect(-worldViewDir, worldNormal);
 				o.localPos = v.vertex;
