@@ -29,6 +29,24 @@ float3 HSB2RGB(in float3 c)
 	return c.z * lerp(float3(1.0, 1.0, 1.0), rgb, c.y);
 }
 
+float Luminance(in float3 c)
+{
+	//根据人眼对颜色的敏感度，可以看见对绿色是最敏感的
+	return 0.2125 * c.r + 0.7154 * c.g + 0.0721 * c.b;
+}
+
+float2 CorrectUV(in float2 uv, in float4 texelSize)
+{
+	float2 result = uv;
+	
+	#if UNITY_UV_STARTS_AT_TOP
+	if(texelSize.y < 0.0)
+		result.y = 1.0 - uv.y;
+	#endif
+
+	return result;
+}
+
 float Point(float2 position, float size, float2 uv)
 {
 	float2 v = 1 - step(size / 2.0, abs(uv - position.xy));

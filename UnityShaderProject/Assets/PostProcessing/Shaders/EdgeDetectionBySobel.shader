@@ -5,7 +5,7 @@ Shader "Kaima/PostProcessing/EdgeDetectionBySobel"
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
+		_MainTex("Texture", 2D) = "white" {}
 		_Hardness("Hardness", Range(0, 5)) = 1
 	}
 	SubShader
@@ -23,6 +23,7 @@ Shader "Kaima/PostProcessing/EdgeDetectionBySobel"
 			#pragma fragment frag
 			
 			#include "UnityCG.cginc"
+			#include "Assets/_Libs/Tools.cginc"
 
 			struct v2f
 			{
@@ -50,11 +51,6 @@ Shader "Kaima/PostProcessing/EdgeDetectionBySobel"
 				return o;
 			}
 
-			fixed luminance(fixed4 color)
-			{
-				return 0.2125 * color.r + 0.7154 * color.g + 0.0721 * color.b;
-			}
-
 			half Sobel(float2 uv[9])
 			{
 				const half verticalMask[9] = {-1, 0, 1,
@@ -68,7 +64,7 @@ Shader "Kaima/PostProcessing/EdgeDetectionBySobel"
 				half edgeHorizontal = 0;
 				for(int i = 0; i < 9; i++)
 				{
-					half lum = luminance(tex2D(_MainTex, uv[i]));
+					half lum = Luminance(tex2D(_MainTex, uv[i]));
 					edgeVertical += verticalMask[i] * lum * _Hardness;
 					edgeHorizontal += horizontalMask[i] * lum * _Hardness;
 				}
