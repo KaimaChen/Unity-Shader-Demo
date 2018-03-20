@@ -47,6 +47,12 @@ float2 CorrectUV(in float2 uv, in float4 texelSize)
 	return result;
 }
 
+//value: [0, 1]
+float Convert01(in float value)
+{
+	return (value * 0.5 + 0.5);
+}
+
 float Point(float2 position, float size, float2 uv)
 {
 	float2 v = 1 - step(size / 2.0, abs(uv - position.xy));

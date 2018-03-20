@@ -5,7 +5,7 @@
 		_MainTex ("Texture", 2D) = "white" {}
 		_OutlineColor("Outline Color", Color) = (0,0,0,1)
 		_OutlineWidth("Outline Width", Range(0, 1)) = 0.2
-		_ZOffset("Z Offset", Float) = -1.0
+		_ZOffset("Z Offset", Float) = -0.5
 	}
 	SubShader
 	{
@@ -13,6 +13,7 @@
 
 		Pass
 		{
+			NAME "OUTLINE"
 			Cull Front
 
 			CGPROGRAM
