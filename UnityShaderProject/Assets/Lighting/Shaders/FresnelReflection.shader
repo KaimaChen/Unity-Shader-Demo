@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Lighting/FresnelReflection"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Lighting/FresnelReflection"
 {
 	Properties
 	{
@@ -41,7 +43,7 @@
 			{
 				v2f o;
 				float3 worldPos = mul(unity_ObjectToWorld, v.vertex);
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 				o.worldNormal = UnityObjectToWorldNormal(v.normal);
 				o.worldLightDir = UnityWorldSpaceLightDir(worldPos);

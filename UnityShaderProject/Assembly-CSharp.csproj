@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{BA73AC8B-24AA-3417-38D5-45CD164A3F5E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_3;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:/Unity/5.6/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Unity/5.6/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Depth\Scripts\DepthOfField.cs" />
+     <Compile Include="Assets\Depth\Scripts\EnableDepthMap.cs" />
+     <Compile Include="Assets\Depth\Scripts\EnableDepthMapAndBlit.cs" />
+     <Compile Include="Assets\Depth\Scripts\EnableDepthMapAndPassFrustum.cs" />
+     <Compile Include="Assets\Depth\Scripts\EnableDepthMapAndPassMatrix.cs" />
+     <Compile Include="Assets\Dissolve\Scripts\CombineMeshes.cs" />
+     <Compile Include="Assets\Dissolve\Scripts\Dissolve.cs" />
+     <Compile Include="Assets\Dissolve\Scripts\DissolveDirection.cs" />
+     <Compile Include="Assets\Dissolve\Scripts\DissolveEnvironment.cs" />
+     <Compile Include="Assets\Dissolve\Scripts\NoiseTool.cs" />
+     <Compile Include="Assets\Dissolve\Scripts\SendPlayerPos.cs" />
+     <Compile Include="Assets\NormalTex\Scripts\PrintNormal.cs" />
+     <Compile Include="Assets\Other\Scripts\BlackHole.cs" />
+     <Compile Include="Assets\PostProcessing\Scripts\Bloom.cs" />
+     <Compile Include="Assets\PostProcessing\Scripts\GaussianBlur.cs" />
+     <Compile Include="Assets\PostProcessing\Scripts\MotionBlur.cs" />
+     <Compile Include="Assets\PostProcessing\Scripts\PostProcessing.cs" />
+     <Compile Include="Assets\Shadows\Plane Shadow\Scripts\PassPlaneMatrix.cs" />
+     <Compile Include="Assets\Shadows\Sphere Shadow\Scripts\PassSphereData.cs" />
+     <Compile Include="Assets\_Scripts\ColorPicker.cs" />
+     <Compile Include="Assets\_Scripts\RenderCubemapWizard.cs" />
+     <None Include="Assets\Dissolve\Shaders\BlendOriginColor.shader" />
+     <None Include="Assets\Subsurface Scattering\Shaders\WrapLighting.shader" />
+     <None Include="Assets\Shape\Shaders\Polar3.shader" />
+     <None Include="Assets\Shape\Shaders\ConcentricCircle5.shader" />
+     <None Include="Assets\Bump\Shaders\NormalMapping.shader" />
+     <None Include="Assets\Shape\Shaders\Gear.shader" />
+     <None Include="Assets\Shadows\Sphere Shadow\Shaders\SphereShadow.shader" />
+     <None Include="Assets\Shape\Shaders\RisingSun.shader" />
+     <None Include="Assets\Bump\Shaders\SteepParallaxWithSoftShadow.shader" />
+     <None Include="Assets\Lighting\Shaders\Refract.shader" />
+     <None Include="Assets\NPR\Shaders\Toon.shader" />
+     <None Include="Assets\Depth\Shaders\ForceField.shader" />
+     <None Include="Assets\Lighting\Shaders\SimplePBR.shader" />
+     <None Include="Assets\Shape\Shaders\Difference.shader" />
+     <None Include="Assets\Shape\Shaders\ConcentricCircle.shader" />
+     <None Include="Assets\Shape\Shaders\Polar7.shader" />
+     <None Include="Assets\Outline\Shaders\MoveAlongVertex.shader" />
+     <None Include="Assets\Other\Shaders\GhostShader.shader" />
+     <None Include="Assets\Shape\Shaders\MultiConcentricCircle.shader" />
+     <None Include="Assets\Depth\Shaders\OrthoIntersectionHighlight.shader" />
+     <None Include="Assets\Bump\Shaders\SteepParallax.shader" />
+     <None Include="Assets\Dissolve\Shaders\Basic.shader" />
+     <None Include="Assets\Depth\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Dissolve\Shaders\Trifox.shader" />
+     <None Include="Assets\Bump\Shaders\SimpleParallaxWithOffsetLimit.shader" />
+     <None Include="Assets\Subsurface Scattering\Shaders\FastSSS.shader" />
+     <None Include="Assets\Outline\Shaders\MoveInView.shader" />
+     <None Include="Assets\Bump\Shaders\DisplacementNoTess.shader" />
+     <None Include="Assets\Shape\Shaders\Polygon.shader" />
+     <None Include="Assets\Shape\Shaders\Polar1.shader" />
+     <None Include="Assets\Shape\Shaders\SmoothCircle.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Pixelation.shader" />
+     <None Include="Assets\Bump\Shaders\ParallaxOcclusionMapping.shader" />
+     <None Include="Assets\Depth\Shaders\WaterFlooded.shader" />
+     <None Include="Assets\Depth\Shaders\IntersectionHighlight.shader" />
+     <None Include="Assets\Outline\Shaders\ZOffset.shader" />
+     <None Include="Assets\NPR\Shaders\ProceduralGeometrySilhouette-ZBias.shader" />
+     <None Include="Assets\PostProcessing\Shaders\EdgeDetectionBySobel.shader" />
+     <None Include="Assets\Other\Shaders\PaperFold.shader" />
+     <None Include="Assets\Dissolve\Shaders\EdgeColor.shader" />
+     <None Include="Assets\Shape\Shaders\Line.shader" />
+     <None Include="Assets\PostProcessing\Shaders\CrossHatching.shader" />
+     <None Include="Assets\Shape\Shaders\Rect.shader" />
+     <None Include="Assets\Shape\Shaders\MultiCircle.shader" />
+     <None Include="Assets\Outline\Shaders\MoveAlongVertexNormal.shader" />
+     <None Include="Assets\Other\Shaders\BornFromY.shader" />
+     <None Include="Assets\Depth\Shaders\SimpleBlur.shader" />
+     <None Include="Assets\PostProcessing\Shaders\GaussianBlur.shader" />
+     <None Include="Assets\Bump\Shaders\SimpleParallax.shader" />
+     <None Include="Assets\Shape\Shaders\ConcentricCircle1.shader" />
+     <None Include="Assets\NormalTex\Shaders\PrintNormal.shader" />
+     <None Include="Assets\Shadows\Sphere Shadow\Shaders\SphereAttenShadow.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Posterization.shader" />
+     <None Include="Assets\Shape\Shaders\Union.shader" />
+     <None Include="Assets\NPR\Shaders\Hatching.shader" />
+     <None Include="Assets\Bump\Shaders\SteepParallaxWithShadow.shader" />
+     <None Include="Assets\Lighting\Shaders\Reflect.shader" />
+     <None Include="Assets\Depth\Shaders\DepthOfField.shader" />
+     <None Include="Assets\Shape\Shaders\LineSegment.shader" />
+     <None Include="Assets\Shape\Shaders\Polar6.shader" />
+     <None Include="Assets\Dissolve\Shaders\ToPoint.shader" />
+     <None Include="Assets\Shape\Shaders\ConcentricCircle2.shader" />
+     <None Include="Assets\PostProcessing\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Shape\Shaders\Circle.shader" />
+     <None Include="Assets\PostProcessing\Shaders\DreamVision.shader" />
+     <None Include="Assets\Shape\Shaders\Color.shader" />
+     <None Include="Assets\Outline\Shaders\MoveAlongNormal.shader" />
+     <None Include="Assets\Depth\Shaders\VerticalFog.shader" />
+     <None Include="Assets\Bump\Shaders\ReliefParallax.shader" />
+     <None Include="Assets\Depth\Shaders\PrintDepth.shader" />
+     <None Include="Assets\Shadows\Plane Shadow\Shaders\PlaneShadow.shader" />
+     <None Include="Assets\Dissolve\Shaders\Ramp.shader" />
+     <None Include="Assets\Shape\Shaders\Point.shader" />
+     <None Include="Assets\Shape\Shaders\Polar2.shader" />
+     <None Include="Assets\Depth\Shaders\EdgeDetection.shader" />
+     <None Include="Assets\Lighting\Shaders\Fresnel.shader" />
+     <None Include="Assets\_Libs\Easing.cginc" />
+     <None Include="Assets\Lighting\Shaders\LightingNReflect.shader" />
+     <None Include="Assets\Depth\Shaders\Fog.shader" />
+     <None Include="Assets\Dissolve\Shaders\FromPoint.shader" />
+     <None Include="Assets\Shape\Shaders\Flower.shader" />
+     <None Include="Assets\Other\Shaders\BlackHole.shader" />
+     <None Include="Assets\Shape\Shaders\Equation.shader" />
+     <None Include="Assets\_Libs\Tools.cginc" />
+     <None Include="Assets\Dissolve\Shaders\FromDirection.shader" />
+     <None Include="Assets\Lighting\Shaders\FresnelReflection.shader" />
+     <None Include="Assets\Other\Shaders\Squash.shader" />
+     <None Include="Assets\Depth\Shaders\ScanLine.shader" />
+     <None Include="Assets\Shape\Shaders\Polar5.shader" />
+     <None Include="Assets\Bump\Shaders\Bump.shader" />
+     <None Include="Assets\Dissolve\Shaders\DirectionAsh.shader" />
+     <None Include="Assets\Shadows\Plane Shadow\Shaders\PlaneAttenShadow.shader" />
+     <None Include="Assets\NPR\Shaders\ProceduralGeometrySilhouette-VertexNormal.shader" />
+     <None Include="Assets\Shape\Shaders\ConcentricCircle3.shader" />
+     <None Include="Assets\Shape\Shaders\Polar4.shader" />
+     <None Include="Assets\NPR\Shaders\SurfaceAngleSilhouette.shader" />
+     <None Include="Assets\PostProcessing\Shaders\LensCircle.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Bloom.shader" />
+     <None Include="Assets\Bump\Shaders\Displacement.shader" />
+     <None Include="Assets\Shape\Shaders\ConcentricCircle4.shader" />
+     <None Include="Assets\PostProcessing\Shaders\ThermalVision.shader" />
+     <None Include="Assets\Dissolve\Shaders\TwoEdgeColor.shader" />
+     <None Include="Assets\PostProcessing\Shaders\BSC.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/Unity/5.6/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>D:/Unity/5.6/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>D:/Unity/5.6/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>D:/Unity/5.6/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>D:/Unity/5.6/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>D:/Unity/5.6/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>D:/Unity/5.6/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Other/BlackHole"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Other/BlackHole"
 {
 	Properties
 	{
@@ -63,7 +65,7 @@
 				v.vertex.xyz += toBlackHole * val;
 
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				return o;
 			}
 			

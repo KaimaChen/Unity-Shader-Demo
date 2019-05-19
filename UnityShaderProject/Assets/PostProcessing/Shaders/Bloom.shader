@@ -1,4 +1,6 @@
-﻿Shader "Kaima/PostProcessing/Bloom"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/PostProcessing/Bloom"
 {
 	Properties
 	{
@@ -35,7 +37,7 @@
 		v2fExtract vertExtract(appdata_img v)
 		{
 			v2fExtract o;
-			o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.vertex = UnityObjectToClipPos(v.vertex);
 			o.uv = v.texcoord;
 			return o;
 		}
@@ -50,7 +52,7 @@
 		v2fBloom vertBloom(appdata_img v)
 		{
 			v2fBloom o;
-			o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.vertex = UnityObjectToClipPos(v.vertex);
 			o.uv.xy = v.texcoord;
 			o.uv.zw = CorrectUV(v.texcoord, _MainTex_TexelSize);
 			return o;

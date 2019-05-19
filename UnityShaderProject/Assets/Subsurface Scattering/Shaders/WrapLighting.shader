@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Subsurface Scattering/WrapLighting"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Subsurface Scattering/WrapLighting"
 {
 	Properties
 	{
@@ -39,7 +41,7 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.worldNormal = UnityObjectToWorldDir(v.normal);
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex);
 				return o;
@@ -89,7 +91,7 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.worldNormal = UnityObjectToWorldDir(v.normal);
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex);
 				return o;

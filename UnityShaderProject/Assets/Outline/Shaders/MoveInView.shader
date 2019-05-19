@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Outline/MoveInView"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Outline/MoveInView"
 {
 	Properties
 	{
@@ -31,7 +33,7 @@
 			v2f vert (appdata_full v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				float3 normal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal); //将法线转到视空间
 				float2 offset = TransformViewToProjection(normal.xy); //只用与屏幕位置有关的xy分量来偏移从而使轮廓大小与摄像机的位置无关
@@ -64,7 +66,7 @@
 			v2f vert (appdata_full v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				return o;
 			}
 			

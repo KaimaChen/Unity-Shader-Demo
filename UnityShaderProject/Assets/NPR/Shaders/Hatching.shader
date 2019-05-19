@@ -1,4 +1,6 @@
-﻿Shader "Kaima/NPR/Hatching"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/NPR/Hatching"
 {
 	Properties
 	{
@@ -48,7 +50,7 @@
 			v2f vert (appdata_base v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.texcoord * _Tile;
 
 				fixed3 worldNormal = normalize(UnityObjectToWorldNormal(v.normal));

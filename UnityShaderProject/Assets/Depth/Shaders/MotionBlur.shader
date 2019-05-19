@@ -1,4 +1,6 @@
-﻿//只能用于物体不动，摄像机动的情况
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+//只能用于物体不动，摄像机动的情况
 Shader "Kaima/Depth/MotionBlur"
 {
 	Properties
@@ -39,7 +41,7 @@ Shader "Kaima/Depth/MotionBlur"
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = float4(v.uv, v.uv);
 				#if UNITY_UV_STARTS_AT_TOP
 					if(_MainTex_TexelSize.y < 0)

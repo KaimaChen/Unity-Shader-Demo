@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Normal/PrintNormal"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Normal/PrintNormal"
 {
 	Properties
 	{
@@ -31,7 +33,7 @@
 			v2f vert (appdata_img v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = CorrectUV(v.texcoord, _MainTex_TexelSize);
 				return o;
 			}

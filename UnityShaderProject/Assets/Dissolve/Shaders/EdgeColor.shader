@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Dissolve/EdgeColor"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Dissolve/EdgeColor"
 {
 	Properties
 	{
@@ -46,7 +48,7 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uvMainTex = TRANSFORM_TEX(v.uv, _MainTex);
 				o.uvNoiseTex = TRANSFORM_TEX(v.uv, _NoiseTex);
 				return o;

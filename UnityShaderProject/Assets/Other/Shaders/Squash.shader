@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Other/Squash"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Other/Squash"
 {
 	Properties
 	{
@@ -57,7 +59,7 @@
 				float val = max(0, _Control - normalizedDist);
 				v.vertex.xyz += localNegativeY * val;
 
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				return o;
 			}
 			

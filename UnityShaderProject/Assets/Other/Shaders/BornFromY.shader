@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Other/BornFromY"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Other/BornFromY"
 {
 	Properties
 	{
@@ -61,7 +63,7 @@
 				v.vertex.xyz += localPositiveY * val;
 
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				return o;
 			}
 			

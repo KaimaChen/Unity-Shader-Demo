@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Dissolve/DirectionAsh"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Dissolve/DirectionAsh"
 {
 	Properties
 	{
@@ -87,7 +89,7 @@
 				float val = max(0, flyDegree * _FlyIntensity);
 				v.vertex.xyz += localFlyDirection * val;
 
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				
 				return o;
 			}

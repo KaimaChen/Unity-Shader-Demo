@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Outline/MoveAlongVertexNormal"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Outline/MoveAlongVertexNormal"
 {
 	Properties
 	{
@@ -33,7 +35,7 @@
 			v2f vert (appdata_full v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				float3 dir1 = normalize(v.vertex.xyz);
 				float3 dir2 = v.normal;
@@ -71,7 +73,7 @@
 			v2f vert (appdata_full v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				return o;
 			}
 			

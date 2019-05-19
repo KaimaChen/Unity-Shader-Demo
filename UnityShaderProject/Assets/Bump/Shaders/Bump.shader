@@ -1,4 +1,6 @@
-﻿Shader "Kaima/Bump/Bump"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/Bump/Bump"
 {
 	Properties
 	{
@@ -35,7 +37,7 @@
 			v2f vert (appdata_tan v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.texcoord;
 
 				TANGENT_SPACE_ROTATION;

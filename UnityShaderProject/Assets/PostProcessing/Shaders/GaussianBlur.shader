@@ -1,4 +1,6 @@
-﻿Shader "Kaima/PostProcessing/GaussianBlur"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Kaima/PostProcessing/GaussianBlur"
 {
 	Properties
 	{
@@ -25,7 +27,7 @@
 		v2f vertHorizontal(appdata_img v)
 		{
 			v2f o;
-			o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.vertex = UnityObjectToClipPos(v.vertex);
 
 			half2 uv = v.texcoord;
 			o.uv[0] = uv;
@@ -40,7 +42,7 @@
 		v2f vertVertical(appdata_img v)
 		{
 			v2f o;
-			o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.vertex = UnityObjectToClipPos(v.vertex);
 
 			half2 uv = v.texcoord;
 			o.uv[0] = uv;
